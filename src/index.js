@@ -1,13 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
+import { HomePage } from 'pages/home-page';
 import reportWebVitals from './reportWebVitals';
+import { AlertProvider } from 'modules/alert/provider/alert-provider';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <>
+      <AlertProvider>
+        <HomePage />
+      </AlertProvider>
+    </>
   </React.StrictMode>
 );
 
