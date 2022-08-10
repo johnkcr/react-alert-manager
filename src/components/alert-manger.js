@@ -4,11 +4,17 @@ import { AlertComponent } from "./alert-component";
 import { ListItem } from "@mui/material";
 
 export const AlertManager = () => {
-    const { data } = useAlertReducer();
+    const { data, removeAlert } = useAlertReducer();
 
     return (
-        <div>
-            {data.map(item => <AlertComponent key={item.id} item={item} />)}
+        <div style={{
+            position: "fixed",
+            width: "300px",
+            right: 0,
+            top: 0
+            }}
+        >
+            {data.map(item => <AlertComponent key={item.id} item={item} handleRemoveAlert={removeAlert}/>)}
         </div>
     )
 }
