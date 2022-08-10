@@ -1,0 +1,1 @@
+export const ACTION_ADD_NEW_ALERT = 'ACTION_ADD_NEW_ALERT';
